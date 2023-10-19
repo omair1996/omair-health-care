@@ -1,36 +1,44 @@
-import React from 'react';
-
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import {Link, NavLink} from 'react-router-dom'
 
 function Header() {
   return (
+    
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand to='/'><span style={{fontFamily:'-moz-initial'}}>Omair</span><br/>
+        <span style={{fontFamily:'sans-serif'}}>Health-Care</span>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
+            <NavLink className='nav-link' to="/">Home</NavLink>
+            <NavLink className='nav-link' to="/DoctorsService">
+              Doctors & Service
+            </NavLink>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavLink className='dropdown-item' to="/Appointments">
+                Appointments
+              </NavLink>
+              <NavLink className='dropdown-item' to="/BloodTest">
+                Blood test
+              </NavLink>
+              <NavLink className='dropdown-item' to="/Location">
+                Locations
+                </NavLink>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
+              <NavLink className='dropdown-item' to="/About">
+                About
+              </NavLink>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    
   );
 }
-
 export default Header;
