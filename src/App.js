@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Home from './Home';
 import BloodTest from './BloodTest';
-import Appointments from './Appointments';
+import  AppointmentScheduler from './Appointments';
 import DoctorsService from './DoctorsService';
 import Location from './Location';
 import About from './About'
@@ -15,8 +15,8 @@ function App() {
     <div>
       <Header/>
       <Routes>
-      <Route path='/Home' element={<Home/>}/>
-    <Route path='/Appointments' element={<Appointments/>}/>
+      <Route path='/11' element={<Home/>}/>
+    <Route path='/Appointments' element={< AppointmentScheduler/>}/>
     <Route path='/BloodTest' element={<BloodTest/>}/>
     <Route path='/DoctorsService' element={<DoctorsService/>}/>
     <Route path='Location' element={<Location/>}/>

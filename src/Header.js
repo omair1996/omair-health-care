@@ -9,9 +9,9 @@ function Header() {
     
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand to='/'><span style={{fontFamily:'-moz-initial'}}>Omair</span><br/>
+        <NavLink className='navbar-brand' to='/'><span style={{fontFamily:'-moz-initial'}}>Omair</span><br/>
         <span style={{fontFamily:'sans-serif'}}>Health-Care</span>
-        </Navbar.Brand>
+        </NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -19,7 +19,7 @@ function Header() {
             <NavLink className='nav-link' to="/DoctorsService">
               Doctors & Service
             </NavLink>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            <NavDropdown title="More" id="basic-nav-dropdown">
               <NavLink className='dropdown-item' to="/Appointments">
                 Appointments
               </NavLink>
