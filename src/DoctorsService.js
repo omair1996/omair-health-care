@@ -6,7 +6,7 @@ function DoctorsService (){
 
   const Search = () => {
     if (!condition || !location) {
-      alert('Please fill in all fields.');
+      alert('Please fill in the  textarea and location.');
       return;
     }
 
@@ -29,12 +29,12 @@ function DoctorsService (){
       <h1>find a Doctor</h1>
       <div className="col-10" style={{border:'2px solid grey', height:'300px'}}>
         <div className="row" style={{marginTop:'50px'}}>
-          <div className="col-md-5 col-sm-12">
-       <input type="text" placeholder="tell me what is wrong with you" style={{height:'50px',fontFamily:'-moz-initial',fontSize:'25px'}} value={condition}
+          <div className="col-md-6 col-sm-12">
+       <textarea type="text" placeholder="tell me what is wrong with you" style={{height:'50px',fontFamily:'-moz-initial',fontSize:'25px'}} value={condition}
         onChange={(e) => setCondition(e.target.value)}/>
        <label>TELL ME THE CONDITION YOU ARE</label>
        </div>
-       <div className="col-md-5 col-sm-12">
+       <div className="col-md-4 col-sm-12">
        <input type="location" placeholder="Enter your location"  style={{fontFamily:'-moz-initial',fontSize:'25px'}} value={location}
         onChange={(e) => setLocation(e.target.value)}/>
        <label>ENTER YOUR REGION</label>
