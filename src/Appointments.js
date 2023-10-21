@@ -4,7 +4,7 @@ function  AppointmentScheduler (){
   const [patientName, setPatientName] = useState('');
   const [appointmentDate, setAppointmentDate] = useState('');
   const [appointmentTime, setAppointmentTime] = useState('');
-
+ 
 
   const scheduleAppointment = () => {
     if (!patientName || !appointmentDate || !appointmentTime) {
@@ -12,12 +12,13 @@ function  AppointmentScheduler (){
       return;
     }
 
-    alert(`Appointment scheduled for ${patientName} on ${appointmentDate} at ${appointmentTime}.`);
+    alert(`Appointment scheduled for ${patientName}  on ${appointmentDate} at ${appointmentTime}.`);
 
 
     setAppointmentDate('');
     setPatientName('');
     setAppointmentTime('')
+   
 
   };
 
